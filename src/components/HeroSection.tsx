@@ -27,9 +27,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="hero" className="pt-20 pb-16 md:pt-24 md:pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div className="space-y-6">
+    <section id="hero" className="pt-28 pb-16 md:pt-36 md:pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="space-y-6 md:pr-8">
           <h1 
             ref={(el) => (elementsRef.current[0] = el)}
             className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight animate-on-scroll"
@@ -45,11 +45,11 @@ const HeroSection = () => {
           </p>
           <div 
             ref={(el) => (elementsRef.current[2] = el)}
-            className="flex flex-col sm:flex-row sm:items-center gap-4 pt-2 animate-on-scroll stagger-delay-2"
+            className="flex flex-col sm:flex-row sm:items-center gap-4 pt-4 animate-on-scroll stagger-delay-2"
           >
             <Link
               to="/get-started"
-              className="bg-cloudbox-blue hover:bg-cloudbox-darkBlue text-white px-6 py-3 rounded-md transition-all font-medium text-center inline-block w-auto"
+              className="bg-cloudbox-blue hover:bg-cloudbox-darkBlue text-white px-6 py-3 rounded-md transition-all font-medium text-center"
             >
               Get started
             </Link>
@@ -66,8 +66,8 @@ const HeroSection = () => {
           className="animate-on-scroll stagger-delay-3"
         >
           <img
-            src="/lovable-uploads/eebc46ca-3cf4-42d6-b0d6-206174f0f70a.png"
-            alt="Developers working together on computers"
+            src="/lovable-uploads/ac827c97-026f-48f7-8887-f2618886b891.png"
+            alt="Developers working together in modern office environment"
             className="w-full rounded-lg shadow-lg object-cover"
           />
         </div>
