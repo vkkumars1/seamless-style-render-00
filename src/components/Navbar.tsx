@@ -1,13 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -16,15 +13,12 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-
   return <nav className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12', isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent')}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="text-cloudbox-blue text-2xl font-bold">
@@ -33,7 +27,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <div className="flex space-x-12">
+          <div className="flex space-x-2">
             <Link to="/features" className="text-gray-600 hover:text-cloudbox-blue transition-colors">
               Features
             </Link>
@@ -91,5 +85,4 @@ const Navbar = () => {
         </div>}
     </nav>;
 };
-
 export default Navbar;
