@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -65,8 +66,8 @@ const HeroSection = () => {
           className="animate-on-scroll stagger-delay-3"
         >
           <img
-            src="/lovable-uploads/c881b938-52d8-4d20-a4d7-b7a9b3e7cd0a.png"
-            alt="People collaborating on computers"
+            src="/lovable-uploads/ac827c97-026f-48f7-8887-f2618886b891.png"
+            alt="Developers working together in modern office environment"
             className="w-full rounded-lg shadow-lg object-cover"
           />
         </div>
