@@ -1,5 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
+import { Cloud, Shield, Users, FileText, Image, Video } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const FeaturesSection = () => {
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
@@ -24,8 +26,41 @@ const FeaturesSection = () => {
     };
   }, []);
 
+  const features = [
+    {
+      icon: <Cloud className="h-6 w-6 text-white" />,
+      title: "Cloud Storage",
+      description: "Store your files securely in the cloud and access them from anywhere, on any device."
+    },
+    {
+      icon: <Shield className="h-6 w-6 text-white" />,
+      title: "Advanced Security",
+      description: "Your files are protected with industry-leading encryption and security features."
+    },
+    {
+      icon: <Users className="h-6 w-6 text-white" />,
+      title: "Team Collaboration",
+      description: "Work together with your team in real-time on shared documents and projects."
+    },
+    {
+      icon: <FileText className="h-6 w-6 text-white" />,
+      title: "File Sharing",
+      description: "Share files and folders with anyone, even if they don't have an account."
+    },
+    {
+      icon: <Image className="h-6 w-6 text-white" />,
+      title: "Photo Storage",
+      description: "Automatically back up your photos and videos from your mobile devices."
+    },
+    {
+      icon: <Video className="h-6 w-6 text-white" />,
+      title: "Media Playback",
+      description: "Stream your music and videos directly from the cloud without downloading."
+    }
+  ];
+
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 bg-gray-50">
+    <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span 
@@ -36,7 +71,7 @@ const FeaturesSection = () => {
           </span>
           <h2 
             ref={(el) => (elementsRef.current[1] = el)}
-            className="text-3xl md:text-4xl font-bold mt-2 animate-on-scroll stagger-delay-1"
+            className="text-3xl md:text-4xl font-bold mt-2 animate-on-scroll stagger-delay-1 text-cloudbox-black"
           >
             Everything you need in one place
           </h2>
@@ -50,25 +85,17 @@ const FeaturesSection = () => {
 
         <div 
           ref={(el) => (elementsRef.current[3] = el)}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll stagger-delay-3"
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 animate-on-scroll stagger-delay-3"
         >
-          {[
-            {
-              title: "Secure Storage",
-              description: "Store your files securely with enterprise-grade encryption and advanced security features."
-            },
-            {
-              title: "Easy Sharing",
-              description: "Share files and folders with anyone, even if they don't have a CloudBox account."
-            },
-            {
-              title: "Real-time Collaboration",
-              description: "Work together on documents, spreadsheets, and presentations in real-time."
-            }
-          ].map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-cloudbox-gray">{feature.description}</p>
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-start">
+              <div className="bg-cloudbox-blue rounded-lg p-2 mr-4 flex-shrink-0">
+                {feature.icon}
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-cloudbox-black">{feature.title}</h3>
+                <p className="text-cloudbox-gray">{feature.description}</p>
+              </div>
             </div>
           ))}
         </div>
