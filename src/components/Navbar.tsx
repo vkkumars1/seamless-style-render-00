@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <div className="flex space-x-2">
+          <div className="flex space-x-8">
             <Link to="/features" className="text-gray-600 hover:text-cloudbox-blue transition-colors">
               Features
             </Link>
