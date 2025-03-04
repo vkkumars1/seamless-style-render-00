@@ -1,0 +1,22 @@
+
+.pricing-page {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.pricing-main {
+  padding-top: 120px;
+  padding-bottom: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+  .pricing-main {
+    padding-top: 100px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

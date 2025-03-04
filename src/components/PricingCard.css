@@ -1,0 +1,147 @@
+
+.pricing-card {
+  flex: 1;
+  max-width: 350px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.pricing-card-popular {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card-popular-badge {
+  background-color: #1565D8;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pricing-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pricing-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.pricing-card-price-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.pricing-card-price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.pricing-card-period {
+  font-size: 16px;
+  color: #6B7280;
+  margin-left: 4px;
+}
+
+.pricing-card-description {
+  color: #6B7280;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.pricing-card-button {
+  display: inline-block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pricing-card-button-primary {
+  background-color: #1565D8;
+  color: white;
+}
+
+.pricing-card-button-primary:hover {
+  background-color: #1253b3;
+}
+
+.pricing-card-button-secondary {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+.pricing-card-button-secondary:hover {
+  background-color: #E5E7EB;
+}
+
+.pricing-card-features {
+  margin-top: auto;
+}
+
+.pricing-card-features-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 16px;
+}
+
+.pricing-card-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card-feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+.pricing-card-feature-icon {
+  color: #10B981;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .pricing-card {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-card-content {
+    padding: 16px;
+  }
+  
+  .pricing-card-price {
+    font-size: 32px;
+  }
+}
