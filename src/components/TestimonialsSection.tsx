@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './TestimonialsSection.css';
 import TestimonialCard from './TestimonialCard';
@@ -29,7 +28,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <div className="testimonials-section">
+    <section id="testimonials" className="py-16 md:py-24 bg-white">
       <h4 className="testimonials-subtitle">TESTIMONIALS</h4>
       <h2 className="testimonials-title">Trusted by thousands of users worldwide</h2>
       <p className="testimonials-description">
@@ -47,7 +46,7 @@ const TestimonialsSection = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

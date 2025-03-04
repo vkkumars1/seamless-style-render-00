@@ -25,6 +25,14 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <nav className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12', isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent')}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="text-cloudbox-blue text-2xl font-bold">
@@ -34,18 +42,18 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <div className="flex space-x-12">
-            <Link to="/features" className="text-gray-600 hover:text-cloudbox-blue transition-colors">
+            <a onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Features
-            </Link>
-            <Link to="/pricing" className="text-gray-600 hover:text-cloudbox-blue transition-colors">
+            </a>
+            <a onClick={() => scrollToSection('pricing')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Pricing
-            </Link>
-            <Link to="/testimonials" className="text-gray-600 hover:text-cloudbox-blue transition-colors">
+            </a>
+            <a onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Testimonials
-            </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-cloudbox-blue transition-colors">
+            </a>
+            <a onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Contact
-            </Link>
+            </a>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -67,23 +75,23 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-6 animate-fadeIn">
           <div className="flex flex-col space-y-4">
-            <Link to="/features" className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+            <a onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
               Features
-            </Link>
-            <Link to="/pricing" className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+            </a>
+            <a onClick={() => scrollToSection('pricing')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
               Pricing
-            </Link>
-            <Link to="/testimonials" className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+            </a>
+            <a onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
               Testimonials
-            </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+            </a>
+            <a onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
               Contact
-            </Link>
+            </a>
             <div className="pt-4 border-t border-gray-100 flex flex-col space-y-3">
-              <Link to="/signin" className="text-gray-700 hover:text-cloudbox-blue transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/signin" className="text-gray-700 hover:text-cloudbox-blue transition-colors py-2">
                 Sign in
               </Link>
-              <Link to="/get-started" className="bg-cloudbox-blue hover:bg-cloudbox-darkBlue text-white px-4 py-2 rounded-md transition-colors text-center" onClick={() => setMobileMenuOpen(false)}>
+              <Link to="/get-started" className="bg-cloudbox-blue hover:bg-cloudbox-darkBlue text-white px-4 py-2 rounded-md transition-colors text-center">
                 Get started
               </Link>
             </div>

@@ -79,6 +79,10 @@
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Custom animations */
@@ -103,4 +107,25 @@
 
 .stagger-delay-3 {
   transition-delay: 0.3s;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .stagger-delay-1, .stagger-delay-2, .stagger-delay-3 {
+    transition-delay: 0.05s;
+  }
 }

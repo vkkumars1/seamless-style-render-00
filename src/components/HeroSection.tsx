@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -27,7 +26,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="pt-28 pb-16 md:pt-36 md:pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="hero" className="pt-28 pb-16 md:pt-36 md:pb-24 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div className="space-y-6 md:pr-8">
           <h1 

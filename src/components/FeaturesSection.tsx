@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Cloud, Shield, Users, FileText, Image, Video } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -60,7 +59,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
+    <section id="features" className="py-16 md:py-24 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span 

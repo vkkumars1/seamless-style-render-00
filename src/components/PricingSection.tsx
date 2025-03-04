@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './PricingSection.css';
 import PricingCard from './PricingCard';
@@ -6,7 +5,7 @@ import { CheckIcon } from 'lucide-react';
 
 const PricingSection = () => {
   return (
-    <div className="pricing-section">
+    <section id="pricing" className="bg-gray-50 py-16 md:py-24">
       <h4 className="pricing-subtitle">PRICING</h4>
       <h2 className="pricing-title">Plans for every need</h2>
       <p className="pricing-description">
@@ -64,7 +63,7 @@ const PricingSection = () => {
           ]}
         />
       </div>
-    </div>
+    </section>
   );
 };
 
