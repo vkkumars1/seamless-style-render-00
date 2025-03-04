@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './TestimonialsSection.css';
 import TestimonialCard from './TestimonialCard';
@@ -29,11 +30,13 @@ const TestimonialsSection = () => {
 
   return (
     <section id="testimonials" className="py-16 md:py-24 bg-white">
-      <h4 className="testimonials-subtitle">TESTIMONIALS</h4>
-      <h2 className="testimonials-title">Trusted by thousands of users worldwide</h2>
-      <p className="testimonials-description">
-        See what our customers have to say about CloudBox.
-      </p>
+      <div className="flex flex-col items-center text-center max-w-3xl mx-auto px-6">
+        <h4 className="testimonials-subtitle">TESTIMONIALS</h4>
+        <h2 className="testimonials-title">Trusted by thousands of users worldwide</h2>
+        <p className="testimonials-description">
+          See what our customers have to say about CloudBox.
+        </p>
+      </div>
 
       <div className="testimonials-cards">
         {testimonials.map((testimonial) => (

@@ -13,6 +13,7 @@
   color: #1565D8;
   margin-bottom: 16px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .pricing-title {
@@ -20,14 +21,16 @@
   font-weight: 700;
   color: #111827;
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .pricing-description {
   font-size: 18px;
   color: #4B5563;
   max-width: 700px;
-  margin-bottom: 60px;
+  margin: 0 auto 60px auto;
   line-height: 1.5;
+  text-align: center;
 }
 
 .pricing-cards {
@@ -35,6 +38,9 @@
   justify-content: center;
   gap: 24px;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media (max-width: 1024px) {
