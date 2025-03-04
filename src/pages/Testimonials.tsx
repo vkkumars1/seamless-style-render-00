@@ -2,14 +2,15 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import './Testimonials.css';
 
 const Testimonials = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="testimonials-page">
       <Navbar />
-      <main className="pt-28 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Testimonials</h1>
-        <p className="text-lg text-gray-600">Customer testimonials coming soon.</p>
+      <main className="testimonials-main">
+        <TestimonialsSection />
       </main>
       <Footer />
     </div>
