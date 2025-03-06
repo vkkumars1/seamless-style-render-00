@@ -39,8 +39,8 @@ const Navbar = () => {
           CloudBox
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        {/* Desktop Navigation - Centered */}
+        <div className="hidden md:flex flex-1 justify-center">
           <div className="flex space-x-12">
             <a onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Features
@@ -55,15 +55,16 @@ const Navbar = () => {
               Contact
             </a>
           </div>
-          
-          <div className="flex items-center space-x-4">
-            <Link to="/signin" className="text-gray-700 hover:text-cloudbox-blue transition-colors">
-              Sign in
-            </Link>
-            <Link to="/get-started" className="bg-cloudbox-blue hover:bg-cloudbox-darkBlue text-white px-4 py-2 rounded-md transition-colors">
-              Get started
-            </Link>
-          </div>
+        </div>
+        
+        {/* Sign in and Get started buttons - Right aligned */}
+        <div className="hidden md:flex items-center space-x-4">
+          <Link to="/signin" className="text-gray-700 hover:text-cloudbox-blue transition-colors">
+            Sign in
+          </Link>
+          <Link to="/get-started" className="bg-cloudbox-blue hover:bg-cloudbox-darkBlue text-white px-4 py-2 rounded-md transition-colors">
+            Get started
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
