@@ -1,12 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Function to merge class names (replacing cn utility)
+  const mergeClasses = (...classes) => {
+    return classes.filter(Boolean).join(' ');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +29,7 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
@@ -33,7 +37,7 @@ const Navbar = () => {
     }
   };
 
-  return <nav className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12', isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent')}>
+  return <nav className={mergeClasses('fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12', isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent')}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="text-cloudbox-blue text-2xl font-bold">
           CloudBox
