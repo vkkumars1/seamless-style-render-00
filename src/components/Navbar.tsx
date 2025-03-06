@@ -42,18 +42,18 @@ const Navbar = () => {
         {/* Desktop Navigation - Centered */}
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex space-x-12">
-            <a onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
+            <button onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Features
-            </a>
-            <a onClick={() => scrollToSection('pricing')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
+            </button>
+            <button onClick={() => scrollToSection('pricing')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Pricing
-            </a>
-            <a onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
+            </button>
+            <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Testimonials
-            </a>
-            <a onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-cloudbox-blue transition-colors cursor-pointer">
               Contact
-            </a>
+            </button>
           </div>
         </div>
         
@@ -76,18 +76,18 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-6 animate-fadeIn">
           <div className="flex flex-col space-y-4">
-            <a onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
+            <button onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer text-left">
               Features
-            </a>
-            <a onClick={() => scrollToSection('pricing')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
+            </button>
+            <button onClick={() => scrollToSection('pricing')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer text-left">
               Pricing
-            </a>
-            <a onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
+            </button>
+            <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer text-left">
               Testimonials
-            </a>
-            <a onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer">
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-cloudbox-blue transition-colors py-2 cursor-pointer text-left">
               Contact
-            </a>
+            </button>
             <div className="pt-4 border-t border-gray-100 flex flex-col space-y-3">
               <Link to="/signin" className="text-gray-700 hover:text-cloudbox-blue transition-colors py-2">
                 Sign in
