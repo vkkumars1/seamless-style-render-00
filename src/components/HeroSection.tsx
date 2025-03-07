@@ -63,13 +63,22 @@ const HeroSection = () => {
         </div>
         <div 
           ref={(el) => (elementsRef.current[3] = el)}
-          className="animate-on-scroll stagger-delay-3"
+          className="animate-on-scroll stagger-delay-3 relative"
         >
-          <img
-            src="/lovable-uploads/ac827c97-026f-48f7-8887-f2618886b891.png"
-            alt="Developers working together in modern office environment"
-            className="w-full rounded-lg shadow-lg object-cover"
-          />
+          {/* Border styling div */}
+          <div className="absolute -top-4 -right-4 bottom-4 left-4 border-2 border-gray-300 rounded-lg"></div>
+          
+          {/* Main image with increased size */}
+          <div className="relative z-10 overflow-hidden rounded-lg shadow-xl">
+            <img
+              src="/lovable-uploads/027d819f-2231-492d-8ace-a3ce40169f93.png"
+              alt="Developers working together in modern office environment"
+              className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          
+          {/* Decorative element */}
+          <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-cloudbox-blue rounded-full opacity-20 z-0"></div>
         </div>
       </div>
     </section>
